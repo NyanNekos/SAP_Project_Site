@@ -49,6 +49,12 @@ make sure you are in the application directory, Once in the directory run bundle
 ```
 $ bundle install
 ```
+
+There will be some pending migrations that will need to be migrated before running 
+```
+$ rails db:migrate
+```
+
 Once installed you can choose to run it on a localhost or through an ip
 ### Run localhost 
 
