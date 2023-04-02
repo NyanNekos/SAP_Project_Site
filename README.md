@@ -88,3 +88,19 @@ if there are any issues with installations please follow the ruby on rails guide
 * https://www.ruby-lang.org/en/downloads/
 * https://guides.rubyonrails.org/getting_started.html
 
+## Seed the application 
+Run this to seed the application with users 
+```
+$ rake seed_users
+```
+This will give you admin users and normal users 
+
+### Users details  
+username: jenny@gmail.com
+password: pancake
+
+username: kev@gmail.com
+password: coffeecake
+
+username: slvy@gmail.com
+password: cakefrost
