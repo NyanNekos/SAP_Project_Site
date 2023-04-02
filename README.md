@@ -76,7 +76,7 @@ username: slvy@gmail.com
 password: cake
 
 ### Run localhost 
-Once installed you can choose to run it on a localhost or through an ip
+Once installed and seeded you can choose to run it on a localhost or through an ip
 To run it on a localhost just type in the terminal 
 ```
 $ rails server
