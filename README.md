@@ -56,7 +56,7 @@ To run it on a localhost just type in the terminal
 ```
 $ rails server
 ```
-This will start the Rails server, and you can access your application by opening a web browser and going to http://localhost:3000.
+This will start the Rails server, and you can access your application by opening a web browser and going to http://localhost:3000
 
 ### Run through local ipv4
 Find your Ipv4 address
@@ -113,4 +113,17 @@ This will inject an alert script:
 This will run a script to change the css properties (background color to red):
 ```
 <script>function changeBackground(color) { document.body.style.background = color; } window.addEventListener("load",function() { changeBackground('red') });</script>
+```
+## Broken Access Control
+Access the admin page by typing this at the end of the url
+```
+/admin
+```
+### sample Url
+This is wht the url will look like when you type the /admin at the end of the url
+```
+192.111.1.111:3000/admin
+```
+```
+http://localhost:3000/admin
 ```
