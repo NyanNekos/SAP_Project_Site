@@ -1,0 +1,30 @@
+<!--form generated with scaffold-->
+<%= form_with(model: post) do |form| %>
+
+  <% if post.errors.any? %>
+    <div style="color: red">
+      <!--pluralise numbers-->
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="margin-top: 2.5%">
+    <%= form.label :title, style: "display: block; font-weight: bold;" %>
+    <%= form.text_field  :title %>
+  </div>
+
+  <div style="margin-top: 2.5%">
+    <%= form.label :context, style: "display: block; font-weight: bold;" %>
+    <%= form.text_area :context %>
+  </div>
+
+  <div style="margin-top: 2.5%">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+<% end %>

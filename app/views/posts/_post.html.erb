@@ -1,0 +1,12 @@
+<div id="<%= dom_id post %>">
+  <h3><%= post.title %></h3>
+  <div class="info"><span class="text-muted">Posted <%= time_ago_in_words(post.created_at) %> ago by <%=  post.user.name%></span></div>
+
+  <p>
+  <h4>Recipe:</h4>
+  <%= post.context %>
+  </p>
+
+</div>
+
+

@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+<div class="row pt-5">
+  <div class="text-center">
+    <h1>Viewing Recipe</h1>
+  </div>
+</div>
+<div class="col mb-5" style="padding:18px;">
+  <div class="card shadow-sm mb-4">
+    <div class="card-body px-4 py-5 px-md-5" style="background-color:lightgrey; border-radius: 20px">
+      <%= render @post %>
+      <div class="d-flex">
+        <% if current_user&.admin? || @post.user == current_user %>
+          <%= button_to "Edit this post", edit_post_path(@post), class: "btn btn-primary shadow mr-2", method: :get %>
+          <%= button_to "Destroy post", @post, class: "btn btn-danger shadow", method: :delete %>
+        <%end %>
+      </div>
+        <p> <%= button_to "Back to posts", posts_path, class: "btn btn-success shadow", method: :get %></p>
+    </div>
+  </div>
+</div>

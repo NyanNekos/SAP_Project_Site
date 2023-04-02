@@ -1,0 +1,22 @@
+<div class="row pt-5">
+  <div class="text-center">
+    <h1>Posted Recipes</h1>
+  </div>
+</div>
+
+<div id="posts">
+  <div class="col mb-5" style="padding:18px;">
+    <% @posts.each do |post| %>
+      <div class="card shadow-sm mb-4">
+        <div class="card-body px-4 py-5 px-md-5" style="background-color:lightgrey; border-radius: 20px">
+          <%= render post %>
+          <p>
+            <%= link_to "View This", post, class: "btn btn-primary shadow", role: "button" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="btnPost" style="padding: 12px;"><%= link_to "Post a new recipe", new_post_path, class: "btn btn-primary shadow", role: "button" %></div>
+</div>
+

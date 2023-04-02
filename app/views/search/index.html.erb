@@ -1,0 +1,42 @@
+<!--container using table for the search results -->
+<section class="clean-block clean-post dark">
+  <h1 class="text-center"><%= pluralize(@posts.count, " Result") %></h1>
+  <div class="container">
+    <h2 class="text-center">Search for a recipes Name or contexts</h2>
+    <div class="block-content">
+      <div class="post-body">
+
+        <%= render "search/form" %>
+
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <!--ransack search table -->
+              <th><%=sort_link(@q, :title, "Title", default_order: :asc) %></th>
+              <th><%=sort_link(@q, :context, "Recipe context") %></th>
+              <th><%=sort_link(@q, :user_name, "Users") %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @posts.each do|post| %>
+              <tr>
+                <!--clickable link on the title to the post -->
+                <td><%=link_to post.title, post %></td>
+                <!--only show the first 15 words make it neat -->
+                <td><%= post.context.truncate_words(15) %></td>
+                <!--clickable link to the name that made the post-->
+                <td><%=link_to post.user.name, post%></td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

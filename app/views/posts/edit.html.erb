@@ -1,0 +1,26 @@
+<div class="row pt-5">
+  <div class="text-center">
+    <h1>Editing post</h1>
+  </div>
+</div>
+
+<br>
+
+<div>
+  <%= link_to "Show this post", @post %> |
+  <%= link_to "Back to posts", posts_path %>
+</div>
+
+<div class="col mb-5" style="padding:18px;">
+  <div class="card shadow-sm mb-4">
+    <div class="card-body px-4 py-5 px-md-5" style="background-color:lightgrey; border-radius: 20px">
+      <%= render "form", post: @post %>
+      <p>
+      <div class="d-flex">
+        <%= button_to "View post", @post, class: "btn btn-secondary shadow mr-2", method: :get %>
+        <%= button_to "Back to posts", posts_path, class: "btn btn-success ", method: :get %>
+      </div>
+      <p>
+    </div>
+  </div>
+</div>

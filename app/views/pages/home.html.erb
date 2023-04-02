@@ -1,0 +1,145 @@
+<!--- This is my content --->
+<body>
+<header class="bg-primary-gradient">
+  <div class="container pt-4 pt-xl-5">
+    <div class="row pt-5">
+      <div class="text-center">
+        <p class="fw-bold text-success mb-2">Best Desserts</p>
+        <h1 class="fw-bold">The best recipes for your choice</h1>
+        <img class="img-fluid" src=<%= asset_path 'home/dessertcookbooks.png' %>>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="py-5">
+  <div class="container text-center py-5">
+    <p class="mb-4" style="font-size: 1.6rem;">Different recipes by <span class="bg-success-light p-1"><strong>1200+</strong>
+    </span>&nbsp; people of across the world.</p>
+    <img class="img-fluid" src=<%= asset_path 'home/desserts.jpg' %>>
+  </div>
+</section>
+<section>
+  <div class="container bg-primary-gradient py-5">
+    <div class="row">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <p class="fw-bold text-success mb-2">My Services</p>
+        <h3 class="fw-bold">What dessert recipes we offer</h3>
+      </div>
+    </div>
+    <div class="py-5 p-lg-5">
+      <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+        <div class="col mb-5">
+          <div class="card shadow-sm">
+            <div class="card-body px-4 py-5 px-md-5">
+              <h5 class="fw-bold card-title">Different Cakes</h5>
+              <p class="text-muted card-text mb-4">Cakes Range from Cheese Cake, Forest Cake, Matcha Cake and so much more!</p>
+              <%= link_to "Learn More", posts_path, class: "btn btn-primary shadow", role: "button" %>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-5">
+          <div class="card shadow-sm">
+            <div class="card-body px-4 py-5 px-md-5">
+              <h5 class="fw-bold card-title">Different Macaroons</h5>
+              <p class="text-muted card-text mb-4">Enjoy recipes for different flavour maccroons accross the world by using there recipes.</p>
+              <%= link_to "Learn More", posts_path, class: "btn btn-primary shadow", role: "button" %>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body px-4 py-5 px-md-5">
+              <h5 class="fw-bold card-title">Drink Combinations</h5>
+              <p class="text-muted card-text mb-4">Find out what drinks go well with different desserts. Mix and try them!</p>
+              <%= link_to "Learn More", posts_path, class: "btn btn-primary shadow", role: "button" %>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body px-4 py-5 px-md-5">
+              <h5 class="fw-bold card-title">Dessert combinations</h5>
+              <p class="text-muted card-text mb-4">Find out what are the best dessrt combinations are with other food!</p>
+              <%= link_to "Learn More", posts_path, class: "btn btn-primary shadow", role: "button" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--- My content of tools used--->
+
+<section class="py-5 mt-5">
+  <div class="container py-5">
+    <div class="row mb-5">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <p class="fw-bold text-success mb-2">SAP Project</p>
+        <h2 class="fw-bold"><strong>These are the tools I have used</strong></h2>
+        <p class="text-muted">This project was done by Joswel Bautista / x19369011 &nbsp;</p>
+      </div>
+    </div>
+    <section>
+      <div class="container py-5">
+        <div class="mx-auto" style="max-width: 900px;">
+          <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+            <div class="col mb-4">
+              <div class="card bg-primary-light">
+                <div class="card-body text-center px-4 py-5 px-md-5">
+                  <h5 class="fw-bold card-title mb-3">Ruby On Rails</h5>
+                  <p class="fw-bold text-primary card-text mb-2">Ruby on Rails, or Rails, is the framework used for developing the web application</p>
+                  <%= link_to "Learn more", "https://guides.rubyonrails.org/getting_started.html", class: "btn btn-primary btn-sm", target: "_blank" %>                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card bg-secondary-light">
+                <div class="card-body text-center px-4 py-5 px-md-5">
+                  <h5 class="fw-bold card-title mb-3">Bootstrap Studio</h5>
+                  <p class="fw-bold text-secondary card-text mb-2">Bootstrap Studio was used for designing the website with HTML and CSS</p>
+                  <%= link_to "Learn more", "https://bootstrapstudio.io", class: "btn btn-primary btn-sm", target: "_blank" %>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-4">
+              <div class="card bg-info-light">
+                <div class="card-body text-center px-4 py-5 px-md-5">
+                  <h5 class="fw-bold card-title mb-3">Github</h5>
+                  <p class="fw-bold text-info card-text mb-2">This is where i have uploaded my insecure and secure sites to compare</p>
+                  <%= link_to "Learn more", "https://github.com/NyanNekos", class: "btn btn-primary btn-sm", target: "_blank" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+<!--- Subscribe This is where XSS Will be fixed--->
+<section class="py-5">
+  <div class="container">
+    <div class="border rounded border-white d-flex flex-column justify-content-between align-items-center flex-lg-row bg-primary-gradient p-4 p-lg-5">
+      <div class="text-center text-lg-start py-3 py-lg-1">
+        <h2 class="fw-bold mb-2">Subscribe to our newsletter</h2>
+        <p class="mb-0">Be the first to receive our newest recipes!</p>
+      </div>
+      <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap">
+        <div class="my-2"><input class="border rounded-pill shadow-sm form-control" type="email" name="email" placeholder="Your Email" id="email" value=""></div>
+        <div class="my-2"><button class="btn btn-primary shadow ms-2" type="submit">Subscribe </button></div>
+      </form>
+    </div>
+  </div>
+  <section class="py-5">
+    <div class="container">
+  <% if params[:email] %>
+        <p>Welcome <b><%= h(params[:email]) %></b> Feel free to look at the recipes we have</p>  <% end %>
+    </div>
+  </section>
+</section>
+</body>
+</html>

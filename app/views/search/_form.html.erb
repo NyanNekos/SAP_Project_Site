@@ -1,0 +1,11 @@
+
+<div class="container bg-primary-gradient py-5">
+  <div class="row">
+    <div class="col-md-8 col-xl-6 text-center mx-auto">
+    <%= search_form_for(@q, url: search_path, class:"d-flex") do |f| %>
+  <%= f.search_field :title_or_context_cont,  style: "width: 80%;" %>
+  <div class="btn-search"> <%= f.submit "Search!", class: "btn btn-search" %> </div>
+<% end %>
+    </div>
+  </div>
+</div>
