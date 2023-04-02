@@ -10,16 +10,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 The things you need before installing the software.
 
-####For Windows 
+#### For Windows 
 * Ruby Installer: https://rubyinstaller.org/ (The version i was using is 3.1.2)
 * SQLite: https://www.sqlite.org/index.html (The version i was using is3.39.4)
-####For Mac and others)
+#### For Mac and others)
 please follow this guide: https://www.ruby-lang.org/en/downloads/
 
 ### Installation
 When ruby is installed run these commands to run the application
-
-####For Window
 
 Open up command terminal (cmd)
 check the version of ruby and ruby gem by 
