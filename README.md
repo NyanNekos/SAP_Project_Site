@@ -1,6 +1,6 @@
 # SAP Project Insecure
 
-This is my Ruby On Rails Project This is the insecure code 
+This is my Ruby On Rails Project this is the insecure code 
 
 ## Getting Started
 
