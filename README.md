@@ -45,8 +45,8 @@ $rails -v
 To run the application simply download the github secure project and insecure project. 
 Once downloaded redirect to the directory the project is saved in 
 make sure you are in the application directory, Once in the directory run bundle install to install all the gems needed
-
 ```
+
 $ bundle install
 ```
 
@@ -55,9 +55,29 @@ There will be some pending migrations that will need to be migrated before runni
 $ rails db:migrate
 ```
 
-Once installed you can choose to run it on a localhost or through an ip
-### Run localhost 
+## Seed the application 
+Run this to seed the application with users 
+```
+$ rake seed_users
+```
+This will give you admin users and normal users 
 
+### Users details  
+These are the user details that have been generated There are more if you want to check the rake file found in lib/tasks/seed_users.rake
+
+#### Admin Users
+username: jenny@gmail.com
+password: pancake
+
+#### Users
+username: kev@gmail.com
+password: coffeecake
+
+username: slvy@gmail.com
+password: cakefrost
+
+### Run localhost 
+Once installed and seeded you can choose to run it on a localhost or through an ip
 To run it on a localhost just type in the terminal 
 ```
 $ rails server
@@ -87,24 +107,3 @@ You can access your application by opening a web browser and typing your ip alon
 if there are any issues with installations please follow the ruby on rails guide documentation
 * https://www.ruby-lang.org/en/downloads/
 * https://guides.rubyonrails.org/getting_started.html
-
-## Seed the application 
-Run this to seed the application with users 
-```
-$ rake seed_users
-```
-This will give you admin users and normal users 
-
-### Users details  
-These are the user details that have been generated There are more if you want to check the rake file found in lib/tasks/seed_users.rake
-
-#### Admin Users
-username: jenny@gmail.com
-password: pancake
-
-#### Users
-username: kev@gmail.com
-password: coffeecake
-
-username: slvy@gmail.com
-password: cakefrost
