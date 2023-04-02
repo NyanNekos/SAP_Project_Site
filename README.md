@@ -1,6 +1,6 @@
 # Sap Project Secure
 
-This is my Ruby On Rails Project This is the secure code 
+This is my Ruby On Rails Project this is the secure code 
 
 ## Getting Started
 
