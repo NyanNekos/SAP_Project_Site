@@ -60,7 +60,7 @@ $ rails server
 This will start the Rails server, and you can access your application by opening a web browser and going to http://localhost:3000.
 
 ### Run through local ipv4
-
+Find your Ipv4 address
 ```
 $ ip config
 ```
