@@ -33,7 +33,6 @@ Next install rails by using
 
 ```
 $gem install rails
-
 ```
 When this is complete check the version of rails (im using rails 7.0.4.3)
 gem install rails
