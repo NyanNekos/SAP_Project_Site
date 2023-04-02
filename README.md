@@ -95,9 +95,12 @@ $ rake seed_data
 This will give you admin users and normal users 
 
 ### Users details  
+These are the user details that have been generated There are more if you want to check the rake file found in lib/tasks/seed_data.rake
+#### Admin Users
 username: jenny@gmail.com
 password: pancake
 
+#### Users
 username: kev@gmail.com
 password: coffeecake
 
